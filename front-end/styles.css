@@ -31,11 +31,11 @@ label{
 }
 .modal-content{
     background-color: rgb(73, 70, 70);
+    align-items:center;
+    justify-content:center;
 }
 .modal-body{
     display:block;
-    align-items:center;
-    justify-content:center;
 }
 .modal-footer{
     justify-content:center;
@@ -55,6 +55,13 @@ button{
 
 #download{
     color: white;
-    width: 10%;
+    width: 100%;
     height: 50px;
 }
+
+#download-title{
+    padding-left: 30%;
+}
+
+
+
