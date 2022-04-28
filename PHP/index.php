@@ -1,3 +1,23 @@
+<?php
+if($_POST){
+    require('fpdf/fpdf.php');
+    $name = $_POST['name'];
+    $title = 'Our Statistics'
+
+    $pdf = new FPDF();
+    $pdf -> AddPage('L');
+    $pdf -> SetTitle($title);
+    // font - Arial bold 15
+    $pdf -> SetFont('Arial','B',15);
+
+    //$pdf = cell(0, 10, $title, 1, 1, 'C');
+    $w = $pdf -> GetStringWidth($title) + 6;
+    $pdf -> Set
+
+    $pdf->output();
+
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
