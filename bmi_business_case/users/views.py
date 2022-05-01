@@ -9,7 +9,7 @@ from . models import User
 
 class UserListView(ListView):
     model = User
-    template_name = 'users/main.html'
+    template_name = 'users/base.html'
 
 def users_render_pdf_view(request, *args, **kwargs):
    pk = kwargs.get('pk')
