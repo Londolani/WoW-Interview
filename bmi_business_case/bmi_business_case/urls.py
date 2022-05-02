@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from xml.dom.minidom import Document
+from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
@@ -24,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', user_views.UserListView.as_view(), name='user_list_view'),
     path('pdf/<pk>', user_views.users_render_pdf_view, name='user_pdf_view'),
+    url(r'^upload/csv/$', user_views.upload_csv, name='upload_csv'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
